@@ -130,6 +130,8 @@ void GateMateImpl::route_clock()
                     }
                 };
 
+                // The enable input is called EN_INT once the flip-flop is packed
+                reserve_port_if_needed(id_EN_INT);
                 reserve_port_if_needed(id_EN);
                 reserve_port_if_needed(id_SR);
             }
